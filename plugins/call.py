@@ -15,7 +15,6 @@ async def tag_cmd(_, msg: types.Message):
             members.append(member)
 
         users = [member for member in members if member.user and not member.user.is_bot and not member.user.is_deleted]
-        print(users)
 
         mentioned_users = (f"<b>{full_name(msg)}</b> called everyone"
                            f"\n{f'<i>{msg.text.split(maxsplit=1)[1]}</i>' if len(msg.text.split()) > 1 else ''}\n\n")
